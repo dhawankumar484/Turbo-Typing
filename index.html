@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turbo Typing</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <input type="text" class="input-field">
+    <div class="container">
+      <input type="text" class="input-field">
         <div class="content-box">
-          <div class="typing-text">
-            <p></p>
+          <div class="row typing-text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut animi saepe sunt dolorum cumque necessitatibus, atque nesciunt excepturi explicabo officia alias fugit ratione aliquam corrupti impedit fugiat similique blanditiis optio voluptatibus? Officia pariatur magni, reiciendis fuga doloribus eum ex iure adipisci aspernatur et ipsum animi laboriosam, ipsam delectus sed tempora molestias voluptatem in dolores illo, veniam libero odit nisi! Est ipsum illo repellat maiores sapiente exercitationem nihil alias quibusdam? Fuga ex commodi perspiciatis omnis nesciunt eligendi pariatur soluta mollitia doloribus eum quod in provident amet exercitationem, culpa consectetur quidem laboriosam assumenda. Dignissimos porro temporibus, quidem earum animi recusandae autem quisquam.</p>
           </div>
-          <div class="content">
-            <ul class="result-details">
-              <li class="time">
-                <p>Time Left:</p>
-                <span><b>60</b>sec</span>
-              </li>
-              <li class="mistake">
-                <p>Mistakes:</p>
-                <span>0</span>
-              </li>
-              <li class="wpm">
-                <p>WPM (Words Per Minutes):</p>
-                <span>0</span>
-              </li>
-            </ul>
-            <button>Try Again</button>
-          </div>
+          <div class="row content">
+            <ul class="list-inline result-details">
+                <li class="list-inline-item">
+                  <p>Time Left: <span><b>60</b>sec</span></p>
+                </li>
+                <li class="list-inline-item border-left">
+                  <p>Mistakes: <span>0</span></p>
+                </li>
+                <li class="list-inline-item border-left">
+                  <p>WPM: <span>0</span></p>
+                </li>
+                <li class="list-inline-item border-left">
+                    <p>CPM: <span>0</span></p>
+                  </li>
+              </ul>
+              <button class="btn">Try Again</button>
+          </div> 
         </div>
-      </div>
-      <script src="js/paragraphs.js"></script>
-      <script src="js/index.js"></script>
+    </div>
+    <script src="js/texts.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
