@@ -14,6 +14,11 @@ body{
     font-family: 'PT+Sans','Readex+Pro', sans-serif;
 }
 
+::selection{
+    color: #fff;
+    background: #17A2B8;
+  }
+
 .container{
     width: 900px; 
     padding: 13px 25px;
@@ -46,6 +51,44 @@ body{
     letter-spacing: 3px;
     text-align: justify;
 }
+
+.typing-text p span{
+    position: relative;
+  }
+
+.typing-text p span.correct{
+    color: #28a11b;
+  }
+
+.typing-text p span.incorrect{
+    color: #ca3035;
+    outline: 1px solid whitesmoke;
+    background: #feb0bd;
+    border-radius: 4px;
+  }
+
+.typing-text p span.active{
+    color: #17A2B8;
+  }
+
+.typing-text p span.active::before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 5px;
+    background: #17A2B8;
+    animation: blink 1s ease-in-out infinite;
+  }
+
+@keyframes blink{
+    50%{ 
+      opacity: 1; 
+    }
+  }
 
 .status{
     margin: 0px  0px;
