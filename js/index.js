@@ -76,6 +76,21 @@ function initTimer() {
     }
 }
 
+function resetText() {
+    loadTexts();
+    clearInterval(timer);
+    timeLeft = maxTime;
+    charIndex = mistakes = isTyping = 0;
+    inputField.value = "";
+    timeTrack.innerText = timeLeft;
+    wpmTrack.innerText = 0;
+    mistakeTrack.innerText = 0;
+    cpmTrack.innerText = 0;
+    // tryAgainBtn.innerHTML="Try";
+}
+
 
 loadTexts();
 inputField.addEventListener("input", onTyping);
+tryAgainBtn.addEventListener("click", resetText);
+
