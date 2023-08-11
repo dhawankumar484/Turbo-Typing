@@ -16,7 +16,7 @@ body{
 
 .container{
     width: 900px; 
-    padding: 28px 39px;
+    padding: 13px 25px;
     background: #DEF2F1;
     border-radius: 10px;
     box-shadow: 0 10px 15px rgba(0,0,0,0.05);
@@ -32,10 +32,9 @@ body{
     background-color: #d4e7e6;
     padding: 20px;
     border-radius: 8px;
-    border: 1px solid #bfbfbf;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    overflow:scroll;
-    max-height: 350px;
+    overflow:hidden;
+    max-height: 400px;
 }
 
 .typing-text::-webkit-scrollbar{
@@ -43,75 +42,78 @@ body{
 }
 
 .typing-text p{
-    font-size: 30px;
+    font-size: 22px;
     letter-spacing: 3px;
-    /* border-bottom: 1px solid #bfbfbf ; */
-    /* text-decoration: underline 1px #bfbfbf; */
     text-align: justify;
 }
 
-.content{
-    margin-top: 22px;
-    display: flex;
-    padding: 15px 0;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+.status{
+    margin: 0px  0px;
+    text-align: center;
+    font-size: 18px;
     border-top: 1px solid #bfbfbf;
-}
-  
-.content .result-details{
-    align-items: center;
-    width: calc(100% - 140px);
-    justify-content: space-between;
-}
-  
-.result-details li{
-    height: 40px;
-    list-style: none;
-    position: relative;
-    align-items: center;
-    padding-right: 40px;
-    font-size: 19px;
-}
-  
-.result-details li:not(:first-child){
-    padding-left: 22px;
-    border-left: 1px solid #bfbfbf;
-}
-  
-.result-details li span{
-    /* display: block; */
-    font-size: 22px;
-    margin-left: 8px;
-}
-  
-li span b{
-    font-weight: bold;
-}
-  
-li:not(:first-child) span{
-    font-weight: bold;
+    padding-top: 20px;
 }
 
-.content button{
-    outline: none;
-    border: none;
-    width: 120px;
-    color: #fff;
-    padding: 8px 0px;
-    font-size: 16px;
-    cursor: pointer;
+.status .stats{
+    background-color: #d4e7e6;
+    border: 1px solid #bfbfbf;
     border-radius: 6px;
+}
+
+.status .stats span{
+    font-size: 19px;
+    font-weight:600;
+}
+
+.try-again .btn {
+    /* float: right; */
+    background-color: #fff;
+    width: 208px;
+    padding: 10px 0px;
+    /* margin-right: -10px; */
     background: #17A2B8;
+    color: #fff;
     transition: transform 0.3s ease;
 }
 
-
-.content button:hover{
+.try-again .btn:hover{
     background-color: #19899a;
 }
 
-.content button:active{
+.try-again .btn:active{
     transform: scale(0.97);
 }
+
+@media (max-width: 992px) {
+    .content-box .typing-text{
+      max-height: 100%;
+    }
+    .typing-text p{
+      font-size: 22px;
+      text-align: justify;
+    }
+  }
+
+
+@media (max-width: 768px) {
+    .content-box .typing-text{
+      max-height: 100%;
+    }
+    .typing-text p{
+      font-size: 19px;
+      text-align: justify;
+    }
+    .status .stats{
+        margin-bottom: 7px;
+     }
+  }
+  @media (max-width: 576px) {
+    .typing-text p{
+      font-size: 18px;
+      text-align: justify;
+    }
+    .status .stats{
+       margin-bottom: 7px;
+    }
+  }
